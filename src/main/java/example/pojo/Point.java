@@ -12,11 +12,22 @@ public class Point {
     int x;
     int y;
     int z;
+    String state;
 
-    public Point(int x, int y, int z) {
+
+    public Point(int x, int y, int z, String state) {
         this.x = x;
         this.y = y;
         this.z = z;
+        this.state = state;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public int getX() {

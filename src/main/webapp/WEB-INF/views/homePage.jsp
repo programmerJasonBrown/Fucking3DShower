@@ -33,11 +33,11 @@
 </html>
 
 <script>
-    setInterval("requestData()", 5000);//设置定时器。 单位ms
+    setInterval("requestData()", 3000);//设置定时器。 单位ms
 
     function requestData() {
         $.ajax({
-            url: "/my3DShower/home/test",
+            url: "/Fucking3DShower/home/test.action",
             type: "Post",
             dataType:"json",
             success: function(data){

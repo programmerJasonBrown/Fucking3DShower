@@ -1,6 +1,8 @@
 package example.controller;
 
 import example.pojo.Point;
+import example.service.PositionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +17,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/home")
 public class IndexController {
 
+    @Autowired
+    private PositionService positionService;
+
     @RequestMapping("/index")
     public String index() {
         return "homePage";
@@ -22,9 +27,12 @@ public class IndexController {
 
     @RequestMapping("/test")
     @ResponseBody
-    public Point test() {
-        Point p = new Point(1,2,3);
-        return p;
+    public Point test(){
+        System.out.println(positionService);
+        return positionService.getPosition();
+
+//        return new Point(1,2,3,"N");
     }
+
 
 }
