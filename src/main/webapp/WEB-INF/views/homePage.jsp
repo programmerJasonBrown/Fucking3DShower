@@ -19,9 +19,9 @@
 
 <body>
 <div>
-<%--<img src="../statics/image/biaozhi.jpg" alt="Smiley face" width="42" height="42">--%>
+    <%--<img src="../statics/image/biaozhi.jpg" alt="Smiley face" width="42" height="42">--%>
 
-<h1  align="center" >高精度多维定位显示</h1>
+    <h1  align="center" >高精度多维定位显示</h1>
 </div>
 <div>当前坐标: <br>
     <div><b>x:</b><span id = "xPosition"> </span></div>
@@ -47,7 +47,6 @@
         newM.appendTo($("body"));
 
         var myChart = echarts.init(document.getElementById('main'));
-        myChart.clearAll();
         console.log(myChart);
         myChart.setOption({
             tooltip: {},
