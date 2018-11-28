@@ -53,14 +53,20 @@
             xAxis3D: {
                 name: "x",
                 type: 'value',
+                max:1000,
+                interval:50,
             },
             yAxis3D: {
                 name: "y",
                 type: 'value',
+                max:1000,
+                interval:50,
             },
             zAxis3D: {
                 name: "z",
                 type: 'value',
+                max:400,
+                interval:20,
             },
             grid3D: {
                 axisLine: {
@@ -112,11 +118,11 @@
 </html>
 
 <script>
-    setInterval("requestData()", 3000);//设置定时器。 单位ms
+    setInterval("requestData()", 100);//设置定时器。 单位ms
     var predata=[];
     function requestData() {
         $.ajax({
-            url: "/Fucking3DShower/home/test.action",
+            url: "/Fucking3DShower/home/test",
             type: "Post",
             dataType:"json",
             success: function(data){
